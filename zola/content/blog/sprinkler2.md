@@ -1,9 +1,10 @@
 +++
-date = "2014-09-20T15:58:52-05:00"
+date = 2014-09-20T15:58:52-05:00
 draft = true
 title = "Evaporative Roof Sprinkler -- Software"
 description = "Sun + Water + Roof + Data analytics = Maybe save money?"
-tags = ["sprinkler","projects"]
+tags = [ "sprinkler", "projects",]
+
 +++
 
 # Evaporative Roof Sprinkler - Software

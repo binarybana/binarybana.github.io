@@ -1,19 +1,20 @@
----
-title: "What does our DNA look like?"
-permalink: "/2011/06/what-does-our-dna-look-like.html"
-date: "2011-06-24T22:03:00.000Z"
-updated: "2011-06-24 22:03:57"
-description: 
-blogger:
-    siteid: "15125061"
-    postid: "6894859864234986076"
-    comments: "2"
-categories: 
-author: 
-    name: "Jason Knight"
-    url: "https://plus.google.com/102340116383554399495?rel=author"
-    image: "//lh5.googleusercontent.com/-7hdboMymj1U/AAAAAAAAAAI/AAAAAAAAJXI/7HfgmM-lRPQ/s512-c/photo.jpg"
----
++++
+title = "What does our DNA look like?"
+permalink = "/2011/06/what-does-our-dna-look-like.html"
+date = 2011-06-24T22:03:00Z
+updated = "2011-06-24 22:03:57"
+
+[blogger]
+siteid = "15125061"
+postid = "6894859864234986076"
+comments = "2"
+
+[author]
+name = "Jason Knight"
+url = "https://plus.google.com/102340116383554399495?rel=author"
+image = "//lh5.googleusercontent.com/-7hdboMymj1U/AAAAAAAAAAI/AAAAAAAAJXI/7HfgmM-lRPQ/s512-c/photo.jpg"
+
++++
 
 <div class="css-full-post-content js-full-post-content">
 Everyone has seen the DNA double helix (if not<a href="http://en.wikipedia.org/wiki/DNA"> click here right now</a>), but what does your DNA look like as an image?<br /><br />Specifically, I was daydreaming today when I thought: what if someone took one of the sequenced human genomes out there and converted all the letters into corresponding colors for the pixels of an image?<br /><br />I decided that that someone was going to be me!<br /><br />And a few minutes later with somewhere north of 25 google searches (where do I download the human genome? How do I remove newlines and capitalize letters with awk? How can I write PNGs with Haskell? What color code is a 32bit RGBA PNG in its header? etc...) I had my answer:<br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-V_3Gj0y8kA0/TgUHrXfv-kI/AAAAAAAAAlw/435g5na3XtU/s1600/testimg.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="319" src="http://3.bp.blogspot.com/-V_3Gj0y8kA0/TgUHrXfv-kI/AAAAAAAAAlw/435g5na3XtU/s320/testimg.png" width="320" /></a></div><div class="separator" style="clear: both; text-align: center;"><br /></div>Now, a few caveats: This is only a portion of the Y chromosome of the <a href="http://hgdownload.cse.ucsc.edu/downloads.html#human">19th human sequenced</a>. It really doesn't look like much does it? But it was a fun exercise for the 30 minutes or so before I headed home for the weekend.<br /><br />The code (almost all of which came from <a href="http://www.haskell.org/haskellwiki/Library/PNG">this PNG example</a>) can be <a href="http://hpaste.org/48283">found here</a>. It is very ugly and does not use Haskell as it was meant to be used. But it gets the job done!<br /><br />Please let me know if you have any suggestions as to making the image prettier/more informative. Perhaps I should indicate the location of TATA boxes or Poly-A tails etc... Maybe I'll find some time to do it too!<br /><br />Just imagine that most of that is inside of us (the guys anyways, sorry ladies!), inside of every cell in our bodies in fact. Kinda neat if you ask me.

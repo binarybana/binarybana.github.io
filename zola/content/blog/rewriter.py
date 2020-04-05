@@ -1,14 +1,22 @@
+from pathlib import Path
+import dateutil.parser
+
 import frontmatter
 from frontmatter.default_handlers import TOMLHandler
 
-from pathlib import Path
+# Some bash magic: `for x in *.html; do mv $x ${x%.*}.md; done`
 
-# for p in p.glob('*.md'):
-#     if p
-with open("2010-08-17-Why-Curing-Cancer-is-Hard.html") as f:
-    post = frontmatter.load(f)
-    # print(post.keys())
-    # print(post)
-
-    post.handler = TOMLHandler()
-    print(frontmatter.dumps(post))
+curdir = Path(".")
+for p in curdir.glob("*.md"):
+    print(p)
+    with open(p, "r") as f:
+        post = frontmatter.load(f)
+        post.handler = TOMLHandler()
+        try:
+            creation_date = dateutil.parser.parse(post["date"])
+            post["date"] = creation_date
+        except:
+            pass
+        txt = frontmatter.dumps(post)
+    with open(p, "w") as f:
+        f.write(txt)
