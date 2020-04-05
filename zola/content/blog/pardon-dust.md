@@ -1,7 +1,8 @@
 +++
-date = "2014-11-09T22:54:16-06:00"
+date = 2014-11-09T22:54:16-06:00
 draft = false
 title = "Pardon the dust"
+
 +++
 
 I'm converting my blog from [blogger.com](www.blogger.com) to using an 
@@ -15,5 +16,3 @@ matters.
 
 While I'm finalizing this some of the styling may be broken on the posts and 
 the comments are currently down. But hang tight!
-
-
