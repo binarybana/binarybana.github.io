@@ -2,28 +2,26 @@
 
 {% block content %}
 
-<div class="level">
-    <div class="level-left">
-        <div class="level-item">
-            <div class="content">
-                <p class="title">
-                    {{ page.title }}
-                </p>
-                <p class="subtitle is-6 has-text-grey-light">{{ page.date | date(format="%Y-%m-%d") }} - Reading time:
-                    {{ page.reading_time }}
-                    minutes
-                </p>
-            </div>
+<div class="columns">
+    <div class="column is-three-quarters">
+        <div class="content">
+            <p class="title">
+                {{ page.title }}
+            </p>
+            <p class="subtitle is-6 has-text-grey-light">{{ page.date | date(format="%Y-%m-%d") }} - Reading time:
+                {{ page.reading_time }}
+                minutes
+            </p>
         </div>
     </div>
-    <div class="level-right">
-        <nav class="breadcrumb level-item" aria-label="breadcrumbs">
+    <div class="column is-one-quarter">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
             <ul>
                 {% for p in page.ancestors %}
                 {% set subsection = get_section(path=p) %}
                 <li><a href="{{ subsection.permalink }}"> {{ subsection.title }} </a></li>
                 {% endfor %}
-                <li class="is-active" aria-current="page"><a href="#">{{ page.title }}</a>
+                <li class="is-active" aria-current="page"><a href="#">{{ page.title | truncate(length=10) }}</a>
                 </li>
             </ul>
         </nav>
@@ -56,14 +54,14 @@
     {% if page.earlier %}
     <div class="column">
         <a href="{{page.earlier.permalink}}">
-            &lt; {{ page.earlier.title }}
+            <i class="fas fa-long-arrow-alt-left"></i> {{ page.earlier.title }}
         </a>
     </div>
     {% endif %}
     {% if page.later %}
     <div class="column">
         <a href="{{page.later.permalink}}">
-            {{ page.later.title }} &gt;
+            {{ page.later.title }} <i class="fas fa-long-arrow-alt-right"></i>
         </a>
     </div>
     {% endif %}
