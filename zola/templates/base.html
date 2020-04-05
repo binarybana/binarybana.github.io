@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MyBlog</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&text=JASONKNIGHT" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+    <style type="text/css">
+        h1 {
+            font-size: 4em;
+            color: #909090;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="section">
+        <!-- <div class="container">
+            <img src="logo.png">
+        </div> -->
+        <div class="container">
+            <a href="/">
+                <h1 class="title" style="font-family: 'Josefin Sans', sans-serif;">JASON KNIGHT</h1>
+            </a>
+            <p class="subtitle">
+                My first website with <strong>Bulma</strong>!
+            </p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            {% block content %} {% endblock %}
+        </div>
+    </section>
+</body>
+
+</html>
