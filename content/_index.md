@@ -5,14 +5,6 @@ template = "index.html"
 page_template = "blog-page.html"
 +++
 
-Hey there.
-
-## A bit about me
-So you may think...
-
 ```rust
-let x = test
+let x: &str = "More to come, stay tuned!";
 ```
-
-## A bit about me
-
