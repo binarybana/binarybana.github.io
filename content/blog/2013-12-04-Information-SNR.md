@@ -2,7 +2,7 @@
 title = "Information SNR"
 permalink = "/Information-SNR.html"
 date = 2013-12-04T20:34:00Z
-updated = "2013-12-04 20:34:23"
+updated = 2013-12-04T20:34:23
 draft = true
 
 [blogger]

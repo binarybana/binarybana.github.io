@@ -2,7 +2,7 @@
 title = "Optimizing Python + Numpy Code"
 permalink = "/2010/04/optimizing-python-numpy-code.html"
 date = 2010-04-05T02:48:00Z
-updated = "2010-04-05 02:48:12"
+updated = 2010-04-05T02:48:12
 
 [blogger]
 siteid = "15125061"

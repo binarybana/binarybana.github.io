@@ -2,7 +2,7 @@
 title = "How to install GHC 7.4.1 and friends in Ubuntu from source"
 permalink = "/2012/02/how-to-install-ghc-741-in-ubuntu-from.html"
 date = 2012-02-04T05:09:00Z
-updated = "2012-02-05 02:31:09"
+updated = 2012-02-05T02:31:09
 
 [blogger]
 siteid = "15125061"

@@ -2,7 +2,7 @@
 title = "Support Vector Machines - An Introduction"
 permalink = "/2010/04/support-vector-machines-introduction.html"
 date = 2010-04-02T05:05:00Z
-updated = "2010-04-02 05:05:27"
+updated = 2010-04-02T05:05:27
 categories = [ "introduction", "pattern recognition", "svm",]
 
 [blogger]

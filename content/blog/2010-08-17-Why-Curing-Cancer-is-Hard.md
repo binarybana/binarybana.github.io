@@ -2,7 +2,7 @@
 title = "Why Curing Cancer is Hard"
 permalink = "/Why-Curing-Cancer-is-Hard.html"
 date = 2010-08-17T18:07:00.001000Z
-updated = "2010-08-20 03:52:31"
+updated = 2010-08-20T03:52:31
 draft = true
 
 [blogger]

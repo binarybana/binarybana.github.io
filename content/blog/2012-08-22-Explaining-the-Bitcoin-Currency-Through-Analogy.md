@@ -2,7 +2,7 @@
 title = "Explaining the Bitcoin Currency Through Analogy"
 permalink = "/Explaining-the-Bitcoin-Currency-Through-Analogy.html"
 date = 2012-08-22T04:41:00Z
-updated = "2012-08-22 04:41:26"
+updated = 2012-08-22T04:41:26
 draft = true
 
 [blogger]

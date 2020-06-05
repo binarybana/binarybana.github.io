@@ -2,7 +2,7 @@
 title = "There and Back Again: A Tale of 31 Bitcoins or \"How I nearly lost $300 in the Bitcoin cryptocurrency\""
 permalink = "/2012/07/there-and-back-again-tale-of-31.html"
 date = 2012-08-01T02:09:00.002000Z
-updated = "2012-08-01 02:09:29"
+updated = 2012-08-01T02:09:29
 
 [blogger]
 siteid = "15125061"

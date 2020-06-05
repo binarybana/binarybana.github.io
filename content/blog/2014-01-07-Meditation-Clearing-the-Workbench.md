@@ -2,7 +2,7 @@
 title = "Meditation: Clearing the Workbench"
 permalink = "/Meditation-Clearing-the-Workbench.html"
 date = 2014-01-07T22:41:00.001000Z
-updated = "2014-01-07 22:41:43"
+updated = 2014-01-07T22:41:43
 draft = true
 
 [blogger]

@@ -2,7 +2,7 @@
 title = "Turning a New Leaf"
 permalink = "/2013/07/turning-new-leaf.html"
 date = 2013-07-08T05:05:00.002000Z
-updated = "2013-07-08 05:08:31"
+updated = 2013-07-08T05:08:31
 
 [blogger]
 siteid = "15125061"

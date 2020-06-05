@@ -2,7 +2,7 @@
 title = "Faster Compression"
 permalink = "/2013/01/faster-compression.html"
 date = 2013-01-18T20:45:00Z
-updated = "2013-01-26 02:25:25"
+updated = 2013-01-26T02:25:25
 categories = [ "linux", "parallelism", "command line", "utilities", "compression",]
 
 [blogger]

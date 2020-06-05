@@ -2,7 +2,7 @@
 title = "Our New ChromeOS Notebook - First Impressions"
 permalink = "/2010/12/our-new-chromeos-notebook-first.html"
 date = 2010-12-17T05:17:00Z
-updated = "2010-12-17 05:17:15"
+updated = 2010-12-17T05:17:15
 
 [blogger]
 siteid = "15125061"

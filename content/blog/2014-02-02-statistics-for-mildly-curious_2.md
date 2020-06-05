@@ -2,7 +2,7 @@
 title = "Statistics for the mildly curious"
 permalink = "/2014/02/statistics-for-mildly-curious_2.html"
 date = 2014-02-02T23:49:00.002000Z
-updated = "2014-02-03 02:00:45"
+updated = 2014-02-03T02:00:45
 
 [blogger]
 siteid = "15125061"

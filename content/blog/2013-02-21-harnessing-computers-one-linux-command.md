@@ -2,7 +2,7 @@
 title = "Harnessing Computers - One (Linux command line) step at a time"
 permalink = "/2013/02/harnessing-computers-one-linux-command.html"
 date = 2013-02-21T17:24:00.001000Z
-updated = "2013-02-21 17:24:33"
+updated = 2013-02-21T17:24:33
 
 [blogger]
 siteid = "15125061"
