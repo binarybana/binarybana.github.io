@@ -2,7 +2,7 @@
 title = "(Statistical) Trouble with Trouble (the board game)"
 permalink = "/2013/07/statistical-trouble-with-trouble-board.html"
 date = 2013-07-12T05:07:00Z
-updated = "2013-07-12 05:07:41"
+updated = 2013-07-12T05:07:41
 
 [blogger]
 siteid = "15125061"

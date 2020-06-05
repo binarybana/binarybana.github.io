@@ -2,7 +2,7 @@
 title = "Consumption"
 permalink = "/Consumption.html"
 date = 2013-03-20T19:31:00.002000Z
-updated = "2013-03-20 19:31:21"
+updated = 2013-03-20T19:31:21
 draft = true
 
 [blogger]

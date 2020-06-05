@@ -2,7 +2,7 @@
 title = "So you want to be a (Python) web programmer?"
 permalink = "/2012/04/so-you-want-to-be-python-web-programmer.html"
 date = 2012-04-05T05:21:00.002000Z
-updated = "2012-04-06 16:40:15"
+updated = 2012-04-06T16:40:15
 
 [blogger]
 siteid = "15125061"

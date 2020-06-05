@@ -2,7 +2,7 @@
 title = "Speed Blogging - Flow and Mindfullness"
 permalink = "/2013/08/speed-blogging-flow-and-mindfullness.html"
 date = 2013-08-24T16:15:00.001000Z
-updated = "2013-08-24 16:15:14"
+updated = 2013-08-24T16:15:14
 
 [blogger]
 siteid = "15125061"

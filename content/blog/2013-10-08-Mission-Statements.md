@@ -2,7 +2,7 @@
 title = "Mission Statements"
 permalink = "/Mission-Statements.html"
 date = 2013-10-08T03:09:00.001000Z
-updated = "2013-10-08 03:09:05"
+updated = 2013-10-08T03:09:05
 draft = true
 
 [blogger]

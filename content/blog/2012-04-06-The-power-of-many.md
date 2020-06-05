@@ -2,7 +2,7 @@
 title = "The power of many"
 permalink = "/The-power-of-many.html"
 date = 2012-04-06T17:45:00Z
-updated = "2012-04-06 17:45:28"
+updated = 2012-04-06T17:45:28
 draft = true
 
 [blogger]

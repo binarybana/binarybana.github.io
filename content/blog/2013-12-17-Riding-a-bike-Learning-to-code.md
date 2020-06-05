@@ -2,7 +2,7 @@
 title = "Riding a bike. Learning to code"
 permalink = "/Riding-a-bike-Learning-to-code.html"
 date = 2013-12-17T21:05:00.002000Z
-updated = "2013-12-17 21:05:27"
+updated = 2013-12-17T21:05:27
 draft = true
 
 [blogger]

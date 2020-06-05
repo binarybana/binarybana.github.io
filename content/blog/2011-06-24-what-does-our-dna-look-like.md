@@ -2,7 +2,7 @@
 title = "What does our DNA look like?"
 permalink = "/2011/06/what-does-our-dna-look-like.html"
 date = 2011-06-24T22:03:00Z
-updated = "2011-06-24 22:03:57"
+updated = 2011-06-24T22:03:57
 
 [blogger]
 siteid = "15125061"

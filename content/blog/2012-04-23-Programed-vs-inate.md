@@ -2,7 +2,7 @@
 title = "Programed vs inate?"
 permalink = "/Programed-vs-inate.html"
 date = 2012-04-23T14:12:00Z
-updated = "2012-04-23 14:12:07"
+updated = 2012-04-23T14:12:07
 draft = true
 
 [blogger]

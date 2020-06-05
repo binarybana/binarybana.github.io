@@ -17,6 +17,11 @@ for p in curdir.glob("*.md"):
             post["date"] = creation_date
         except:
             pass
+        try:
+            updated_date = dateutil.parser.parse(post["updated"])
+            post["updated"] = updated_date
+        except:
+            pass
         txt = frontmatter.dumps(post)
     with open(p, "w") as f:
         f.write(txt)

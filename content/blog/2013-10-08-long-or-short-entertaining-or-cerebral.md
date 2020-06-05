@@ -2,7 +2,7 @@
 title = "Long or Short? Entertaining or Cerebral?"
 permalink = "/2013/10/long-or-short-entertaining-or-cerebral.html"
 date = 2013-10-08T03:38:00.001000Z
-updated = "2013-10-08 03:38:53"
+updated = 2013-10-08T03:38:53
 
 [blogger]
 siteid = "15125061"

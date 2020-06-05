@@ -2,7 +2,7 @@
 title = "These are a few of my favorite things"
 permalink = "/2012/08/these-are-few-of-my-favorite-things.html"
 date = 2012-08-31T15:04:00.001000Z
-updated = "2012-09-29 07:10:32"
+updated = 2012-09-29T07:10:32
 
 [blogger]
 siteid = "15125061"

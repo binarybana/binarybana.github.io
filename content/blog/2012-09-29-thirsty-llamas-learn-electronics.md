@@ -2,7 +2,7 @@
 title = "Thirsty Llamas Learn Electronics"
 permalink = "/2012/09/thirsty-llamas-learn-electronics.html"
 date = 2012-09-29T06:44:00Z
-updated = "2012-09-29 07:09:26"
+updated = 2012-09-29T07:09:26
 
 [blogger]
 siteid = "15125061"

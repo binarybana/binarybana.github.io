@@ -2,7 +2,7 @@
 title = "Sell Something; Sell Yourself"
 permalink = "/Sell-Something-Sell-Yourself.html"
 date = 2013-03-15T16:23:00.001000Z
-updated = "2013-03-15 16:23:40"
+updated = 2013-03-15T16:23:40
 categories = [ "selling", "motivation", "career",]
 draft = true
 
