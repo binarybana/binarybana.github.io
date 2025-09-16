@@ -1,13 +1,11 @@
 +++
-date = 2025-09-15T17:14:12-0700
+date = 2025-09-15T17:14:12
 draft = false
 title = "Language is intelligence"
 description = "Why embodied intelligence is not on the AGI tech tree"
 tags = [ "ai", "llms", "intelligence", "response"]
 
 +++
-
-# Language is intelligence
 
 My friend Krishna just [published](https://highentropythoughts.substack.com/p/the-ungrounded-flavor) published a great exposition for why he thinks that LLM's do not have true intelligence. So take a few minutes to read that first.
 
@@ -37,17 +35,17 @@ But how did Helen Keller develop her remarkable capabilities of language and int
 ## How language shapes our minds
 Let's let Gemini paint the [lightly edited] scene:
 > In the 1930s, Alexander Luria, a student and collaborator of Vygotsky, conducted a series of psychological expeditions to Central Asia, specifically Uzbekistan and Kyrgyzstan. The goal was to study how radical social and economic changes brought about by the Soviet collectivization program—which included the introduction of compulsory schooling, new agricultural methods, and a broader social infrastructure—affected cognitive processes.
-
+>
 > The "control" group in this study consisted of rural, illiterate peasants who had not been exposed to formal education or modern society. The "experimental" groups were their peers who had received some level of formal schooling and were participating in the new collective farms. Luria and his team administered a variety of psychological tests and interviews to both groups, observing their reasoning, perception, and problem-solving skills.
-
-> The results, which Luria documented in his 197[6] book, Cognitive Development: Its Cultural and Social Foundations, were a stark confirmation of Vygotsky's theories about the socio-cultural nature of thought. [He found that children, when not exposed to a modern education shared many qualities:]
-
-> * Inability to reason abstractly: As you remember, the uneducated peasants struggled with hypothetical questions. When asked to solve a syllogism like, "In the Far North, all bears are white. Novaya Zemlya is in the Far North. What color are the bears there?" they would often respond by saying they'd never been to the Far North and couldn't know. They were unable to separate the logical structure of the problem from their personal, lived experience.
-
+>
+> The results, which Luria documented in his 197[6] book, [Cognitive Development: Its Cultural and Social Foundations](https://www.amazon.com/Cognitive-Development-Cultural-Social-Foundations/dp/0674137329/ref=sr_1_1), were a stark confirmation of Vygotsky's theories about the socio-cultural nature of thought. [He found that children, when not exposed to a modern education shared many qualities:]
+>
+> * Inability to reason abstractly: The uneducated peasants struggled with hypothetical questions. When asked to solve a syllogism like, "In the Far North, all bears are white. Novaya Zemlya is in the Far North. What color are the bears there?" they would often respond by saying they'd never been to the Far North and couldn't know. They were unable to separate the logical structure of the problem from their personal, lived experience.
+>
 > * Concrete, situational thinking: The peasants' thinking was very concrete and tied to specific situations. Their classifications of objects, for example, were based on practical use rather than abstract categories (e.g., they might group a hammer, a saw, and a log together because "you use them all to make things," rather than grouping all tools together).
-
+>
 > * Reliance on personal experience: Luria found that their responses were consistently grounded in their direct, personal experience. They could not conceive of a hypothetical scenario that was outside of their immediate reality, as in your example of the burning house.
-
+>
 > In contrast, the young adults who had attended school, even for a short time, demonstrated a qualitatively different way of thinking. They were capable of abstract thought, could solve hypothetical problems, and categorized objects based on abstract principles.
 
 So according to Luria, modern academic practices shape our human intelligence. And academic curricula are formed from sequences of structured symbols in language and mathematics.
