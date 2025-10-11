@@ -1,0 +1,112 @@
+#!/usr/bin/env -S uv run --script
+#
+# /// script
+# requires-python = ">=3.12"
+# dependencies = [
+#   "pillow",
+# ]
+# ///
+
+"""
+Generate a favicon with orange and blue circular design.
+Outputs to static/favicon.ico
+"""
+
+from PIL import Image, ImageDraw
+from pathlib import Path
+import math
+
+def create_favicon(size=256):
+    """Create a circular favicon with orange and blue elements."""
+    # Create image with transparent background
+    img = Image.new('RGBA', (size, size), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(img)
+
+    center = size // 2
+
+    # Colors matching the blog theme
+    orange = '#FF7E27'#ff6b35'
+    blue = '#275AAA'
+    light_orange = '#ff8c42'
+
+    # Convert hex to RGB
+    def hex_to_rgb(hex_color):
+        hex_color = hex_color.lstrip('#')
+        return tuple(int(hex_color[i:i+2], 16) for i in (0, 2, 4))
+
+    orange_rgb = hex_to_rgb(orange)
+    blue_rgb = hex_to_rgb(blue)
+    light_orange_rgb = hex_to_rgb(light_orange)
+
+    # Draw outer circle (blue)
+    margin = size // 20
+    draw.ellipse(
+        [margin, margin, size - margin, size - margin],
+        fill=blue_rgb,
+        outline=None
+    )
+
+    # Draw inner circle (orange) - offset to create crescent
+    offset = size // 6
+    inner_margin = size // 6
+    draw.ellipse(
+        [inner_margin + offset, inner_margin,
+         size - inner_margin + offset, size - inner_margin],
+        fill=orange_rgb,
+        outline=None
+    )
+
+    # Draw a smaller accent circle (light orange)
+    accent_size = size // 4
+    accent_x = center + size // 6
+    accent_y = center - size // 8
+    draw.ellipse(
+        [accent_x - accent_size//2, accent_y - accent_size//2,
+         accent_x + accent_size//2, accent_y + accent_size//2],
+        fill=light_orange_rgb,
+        outline=None
+    )
+
+    return img
+
+def main():
+    # Ensure static directory exists
+    static_dir = Path("static")
+    static_dir.mkdir(exist_ok=True)
+
+    # Generate high-res favicon
+    favicon = create_favicon(256)
+
+    # Save as ICO with multiple sizes
+    favicon_path = static_dir / "favicon.ico"
+
+    # Create multiple sizes for ICO format
+    sizes = [16, 32, 48, 64, 128, 256]
+    icons = []
+    for size in sizes:
+        resized = favicon.resize((size, size), Image.Resampling.LANCZOS)
+        icons.append(resized)
+
+    # Save as ICO
+    icons[0].save(
+        favicon_path,
+        format='ICO',
+        sizes=[(s, s) for s in sizes],
+        append_images=icons[1:]
+    )
+
+    # Also save PNG versions for modern browsers
+    favicon.save(static_dir / "favicon-256.png", format='PNG')
+    favicon.resize((32, 32), Image.Resampling.LANCZOS).save(
+        static_dir / "favicon-32.png", format='PNG'
+    )
+
+    print(f"✓ Generated favicon.ico in {static_dir}")
+    print(f"✓ Generated favicon-256.png and favicon-32.png")
+    print("\nAdd to your HTML <head>:")
+    print('  <link rel="icon" type="image/x-icon" href="/favicon.ico">')
+    print('  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">')
+    print('  <link rel="icon" type="image/png" sizes="256x256" href="/favicon-256.png">')
+
+if __name__ == "__main__":
+    main()
