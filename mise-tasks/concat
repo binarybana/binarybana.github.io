@@ -1,0 +1,120 @@
+#!/usr/bin/env -S uv run --script
+#
+# /// script
+# requires-python = ">=3.12"
+# dependencies = []
+# ///
+
+import sys
+from pathlib import Path
+import re
+
+def parse_frontmatter(content):
+    """
+    Parse TOML frontmatter from content.
+    Returns (frontmatter_dict, content_without_frontmatter).
+    """
+    # Check if content starts with +++
+    if not content.strip().startswith('+++'):
+        return {}, content
+
+    # Find the closing +++
+    lines = content.split('\n')
+    if lines[0].strip() != '+++':
+        return {}, content
+
+    # Find the end of frontmatter
+    end_idx = None
+    for i in range(1, len(lines)):
+        if lines[i].strip() == '+++':
+            end_idx = i
+            break
+
+    if end_idx is None:
+        return {}, content
+
+    # Parse frontmatter
+    frontmatter = {}
+    for line in lines[1:end_idx]:
+        line = line.strip()
+        if '=' in line:
+            key, value = line.split('=', 1)
+            key = key.strip()
+            value = value.strip()
+            frontmatter[key] = value
+
+    # Return content after frontmatter
+    body = '\n'.join(lines[end_idx + 1:])
+    return frontmatter, body
+
+def is_published(frontmatter):
+    """Check if a post is published (not draft)."""
+    draft = frontmatter.get('draft', 'false').lower()
+    return draft in ('false', 'no', '0')
+
+def strip_html(text):
+    """Remove HTML tags from text."""
+    # Remove HTML tags
+    text = re.sub(r'<[^>]+>', '', text)
+    # Decode common HTML entities
+    text = text.replace('&nbsp;', ' ')
+    text = text.replace('&lt;', '<')
+    text = text.replace('&gt;', '>')
+    text = text.replace('&amp;', '&')
+    text = text.replace('&quot;', '"')
+    text = text.replace('&#39;', "'")
+    return text
+
+def main():
+    blog_dir = Path("content/blog")
+
+    if not blog_dir.exists():
+        print(f"Error: {blog_dir} does not exist", file=sys.stderr)
+        sys.exit(1)
+
+    # Get all markdown files except _index.md
+    posts = sorted([
+        p for p in blog_dir.glob("*.md")
+        if p.name != "_index.md"
+    ])
+
+    output_parts = []
+    published_count = 0
+
+    for post_path in posts:
+        content = post_path.read_text()
+        frontmatter, body = parse_frontmatter(content)
+
+        # Only include published posts
+        if is_published(frontmatter):
+            title = frontmatter.get('title', post_path.stem).strip('"')
+            date = frontmatter.get('date', 'Unknown date')
+
+            # Add a separator with metadata
+            output_parts.append(f"\n\n--- \n")
+            output_parts.append(f"# {title}\n")
+            output_parts.append(f"Date: {date}\n")
+            output_parts.append(f"File: {post_path.name}\n")
+
+            # Add the body content (stripped of HTML)
+            clean_body = strip_html(body.strip())
+            output_parts.append(clean_body)
+            output_parts.append("\n")
+
+            published_count += 1
+
+    # Write to stdout or file
+    output = ''.join(output_parts)
+
+    if len(sys.argv) > 1:
+        # Write to file if specified
+        output_file = Path(sys.argv[1])
+        output_file.write_text(output)
+        print(f"Concatenated {published_count} published posts to {output_file}", file=sys.stderr)
+    else:
+        # Write to stdout
+        print(output)
+        print(f"\n# Concatenated {published_count} published posts", file=sys.stderr)
+
+if __name__ == "__main__":
+    main()
