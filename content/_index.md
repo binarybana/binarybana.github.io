@@ -5,7 +5,7 @@ template = "index.html"
 page_template = "blog-page.html"
 +++
 
-Well hello there! If you're here then I assume you are curious to learn a bit more about me. Well I'll try not to dissapoint!
+Well hello there! For some reason you've stumbled onto this part of the internet, so I'll do my best to entertain you.
 
 I'm roughly `O(10)` years old, and after building [OctoML](https://octoml.ai), I'm now at NVIDIA trying to make machine learning easier. Check out [my LinkedIn](https://www.linkedin.com/in/binarybana/) for my formal career history. But in short, in the past I've been a computational biologist, data engineer, compiler engineer, product manager, and head of product. Always thinking, meditating, and (for now) increasing in entropy.
 
