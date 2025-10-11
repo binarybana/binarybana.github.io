@@ -1,15 +1,10 @@
 {% extends "base.html" %} {% block content %}
-<h1 class="title">Engineer, entrepreneur, data scientist, father, husband.</h1>
+<h1 class="title">Engineer ‖ entrepreneur ‖ dreamer</h1>
 <div class="content">{{ section.content | safe }}</div>
 <div class="container">
     {% set section = get_section(path="blog/_index.md") %}
-    <h1 class="title">
-        <!-- {{ section.title }} -->
-        Blog atoms
-    </h1>
 
     <div class="content">{{ section.content | safe }}</div>
-
     <ul>
         {% for page in section.pages %}
         <li><a href="{{ page.permalink }}">{{ page.title }}</a></li>
