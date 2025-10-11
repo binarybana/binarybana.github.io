@@ -18,14 +18,103 @@
             src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
         ></script>
         <style type="text/css">
+            /* Cooler base colors for contrast with orange */
+            html {
+                height: 100%;
+            }
+
+            body {
+                min-height: 100%;
+                display: flex;
+                flex-direction: column;
+                background-color: #e2e8f0;
+            }
+
             h1 {
                 font-size: 4em;
-                color: #909090;
+                color: #4a5568;
                 font-family: "Josefin Sans", sans-serif;
             }
 
             .css-full-comments-content {
                 padding: 100px;
+            }
+
+            /* Override hero to use cool dark blue-gray */
+            .hero.is-dark {
+                background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%) !important;
+            }
+
+            /* Orange accent colors */
+            a {
+                color: #ff8c42;
+                transition: all 0.2s ease;
+            }
+
+            a:hover {
+                color: #ff6b35 !important;
+                text-decoration: underline;
+            }
+
+            .footer a:hover i {
+                color: #ff6b35 !important;
+                transform: scale(1.1);
+            }
+
+            .footer a i {
+                transition: all 0.3s ease;
+            }
+
+            /* Orange date/metadata */
+            .has-text-grey-light.subtitle,
+            .subtitle.is-6.has-text-grey-light {
+                color: #ff8c42 !important;
+            }
+
+            /* Orange border accent on titles */
+            .title a {
+                border-left: 4px solid #ff6b35;
+                padding-left: 12px;
+                display: inline-block;
+            }
+
+            /* Orange accent on page titles */
+            .content .title {
+                color: #2d3748;
+                border-bottom: 3px solid #ff8c42;
+                padding-bottom: 8px;
+                display: inline-block;
+            }
+
+            /* Breadcrumb active state in orange */
+            .breadcrumb li.is-active a {
+                color: #ff6b35 !important;
+            }
+
+            /* Orange hover for navigation arrows */
+            .fas.fa-long-arrow-alt-left,
+            .fas.fa-long-arrow-alt-right {
+                color: #ff8c42;
+                transition: transform 0.2s ease;
+            }
+
+            a:hover .fas.fa-long-arrow-alt-left {
+                transform: translateX(-4px);
+            }
+
+            a:hover .fas.fa-long-arrow-alt-right {
+                transform: translateX(4px);
+            }
+
+            /* Cool-toned content background */
+            .section {
+                background-color: #ffffff;
+                flex: 1;
+            }
+
+            /* Footer with cool gray background */
+            .footer {
+                background-color: #e2e8f0 !important;
             }
         </style>
         <script>
