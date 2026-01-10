@@ -9,7 +9,11 @@ page_template = "blog-page.html"
 # Comparing AVIF to GIF.
 
 ### Original HEVC/H.265 encoded video (1.1MB)
-_Not embeddable in html reliably_
+<video controls width="960" autoplay loop playsinline muted>
+  <source src="https://pub-e779c56998574a7c84980fc16b36f129.r2.dev/amir-banner_top.orig.mp4" type='video/mp4; codecs="hvc1.1.6.L93.B0"'>
+  <p>Your browser does not support HEVC playback. 
+     Try <a href="https://pub-e779c56998574a7c84980fc16b36f129.r2.dev/amir-banner_top.orig.mp4">downloading the video</a> or using Safari/Chrome.</p>
+</video>
 
 ### AVIF (440KB)
 ![AVIF](https://pub-e779c56998574a7c84980fc16b36f129.r2.dev/amir-banner_top.avif)
@@ -30,7 +34,7 @@ AVIF (settings recommended by Gemini)
       output.avif
 ```
 
-GIF
+GIF (settings recommended by Gemini)
 ```bash
  ffmpeg -i banner_top.av1.mov -filter_complex \
       "[0:v] split [a][b]; \
