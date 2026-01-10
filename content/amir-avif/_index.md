@@ -15,6 +15,16 @@ page_template = "blog-page.html"
      Try <a href="https://pub-e779c56998574a7c84980fc16b36f129.r2.dev/amir-banner_top.orig.mp4">downloading the video</a> or using Safari/Chrome.</p>
 </video>
 
+### WebM (1.1MB)
+<video controls width="960" autoplay loop playsinline muted>
+  <source src="https://pub-e779c56998574a7c84980fc16b36f129.r2.dev/amir-banner_top.webm" type='video/webm'>
+  <p>Your browser does not support webm playback. 
+     Try <a href="https://pub-e779c56998574a7c84980fc16b36f129.r2.dev/amir-banner_top.webm">downloading the video</a> or using Safari/Chrome.</p>
+</video>
+
+### WebP (1.0MB)
+![WEBP](https://pub-e779c56998574a7c84980fc16b36f129.r2.dev/amir-banner_top.webp)
+
 ### AVIF (400KB)
 ![AVIF](https://pub-e779c56998574a7c84980fc16b36f129.r2.dev/amir-banner_top.avif)
 
@@ -44,8 +54,29 @@ I found on Webkit (iOS web rendering that powers both Safari and iOS Chrome), th
 GIF (settings recommended by Gemini)
 ```bash
  ffmpeg -i banner_top.av1.mov -filter_complex \
-      "[0:v] split [a][b]; \
-   [a] palettegen=stats_mode=full [p]; \
-   [b][p] paletteuse=dither=sierra2_4a" \
-      -loop 0 output.gif
+     "[0:v] split [a][b]; \
+     [a] palettegen=stats_mode=full [p]; \
+     [b][p] paletteuse=dither=sierra2_4a" \
+     -loop 0 output.gif
+```
+
+WebP
+```bash
+ffmpeg -i banner_top.av1.mov \
+    -c:v libwebp \
+    -lossless 0 \
+    -q:v 75 \
+    -loop 0 \
+    -vsync 0 \
+    test.webp
+```
+
+WebM
+```bash
+ffmpeg -i banner_top.av1.mov \
+    -c:v libvpx-vp9 \
+    -pix_fmt yuva420p \
+    -crf 20 -b:v 0 \
+    -an \
+    test.webm
 ```
