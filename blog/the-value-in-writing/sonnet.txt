@@ -1,0 +1,47 @@
+Based on your blog posts and journal entries, I can see you're a deeply technical person with interests spanning machine learning, systems programming, statistics, computational biology, mindfulness, leadership, and personal growth. You appreciate both practical technical depth and philosophical introspection. Here are 10 book recommendations tailored to your interests:
+
+## Technical & Systems Thinking
+
+1. **"Designing Data-Intensive Applications" by Martin Kleppmann**
+   - Given your interests in Redis, Ceph, distributed systems, and your technical depth, this will satisfy your craving for "blub studies" while being intellectually stimulating.
+
+2. **"The Alignment Problem" by Brian Christian**
+   - Bridges your ML background with your emerging interest in consciousness, AGI, and the philosophical implications of AI systems.
+
+## Biology & Computational Science
+
+3. **"Life's Edge: The Search for What It Means to Be Alive" by Carl Zimmer**
+   - Combines your interest in biology with deeper philosophical questions about life and consciousness that you've been pondering.
+
+4. **"The Master and His Emissary" by Iain McGilchrist**
+   - About hemispheric brain function, consciousness, and how we think - connects neuroscience with your meditation practice and interest in modes of thinking.
+
+## Personal Growth & Psychology
+
+5. **"Range: Why Generalists Triumph in a Specialized World" by David Epstein**
+   - Given your diverse interests (Haskell, Julia, biology, meditation, sailing, 3D printing) and your self-reflection about switching between domains, this validates your approach.
+
+6. **"Deep Work" by Cal Newport**
+   - Addresses your struggle with distraction (Hacker News, consumption addiction) and desire to do "goal-directed thinking" more effectively.
+
+## Mathematics & Probability
+
+7. **"The Book of Why" by Judea Pearl**
+   - Your background in Bayesian methods and statistical inference will make this exploration of causality deeply satisfying.
+
+## Leadership & Career
+
+8. **"An Elegant Puzzle: Systems of Engineering Management" by Will Larson**
+   - Given your transition from IC to management at Intel/NVIDIA/OctoML and reflections on leadership challenges.
+
+## Philosophy & Consciousness
+
+9. **"Gödel, Escher, Bach" by Douglas Hofstadter** (if you haven't read it)
+   - Combines your interests in CS theory, consciousness, self-reference, and has the intellectual depth you crave. Your mention of HoTT suggests you'd love this.
+
+10. **"Four Thousand Weeks: Time Management for Mortals" by Oliver Burkeman**
+    - Addresses your existential questions about time allocation, work-life balance, early retirement thoughts, and "what is a life worth living"
+
+These books span your technical interests while honoring your introspective side and addressing specific challenges you've mentioned (anxiety, leadership, distraction, career direction, consciousness). They're all substantial enough to reward deep engagement rather than shallow consumption.
+
+Would you like me to elaborate on any of these recommendations or suggest alternatives in any category?
