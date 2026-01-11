@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Thoughts ⇌ Jason</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
+        />
+        <style type="text/css">
+            /* Content width constraint for optimal readability */
+            :root {
+                --content-width: 50rem;
+            }
+
+            /* Cooler base colors for contrast with orange */
+            html {
+                height: 100%;
+            }
+
+            body {
+                min-height: 100%;
+                display: flex;
+                flex-direction: column;
+                background-color: #e2e8f0;
+            }
+
+            h1 {
+                font-size: 4em;
+                color: #4a5568;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            }
+
+            .css-full-comments-content {
+                padding: 100px;
+            }
+
+            /* Override hero to use cool dark blue-gray */
+            .hero.is-dark {
+                background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%) !important;
+            }
+
+            /* Orange accent colors */
+            a {
+                color: #ff8c42;
+                transition: all 0.2s ease;
+            }
+
+            a:hover {
+                color: #ff6b35 !important;
+                text-decoration: underline;
+            }
+
+            .footer a:hover i {
+                color: #ff6b35 !important;
+                transform: scale(1.1);
+            }
+
+            .footer a i {
+                transition: all 0.3s ease;
+            }
+
+            /* Orange date/metadata */
+            .has-text-grey-light.subtitle,
+            .subtitle.is-6.has-text-grey-light {
+                color: #ff8c42 !important;
+            }
+
+            /* Orange border accent on titles */
+            .title a {
+                border-left: 4px solid #ff6b35;
+                padding-left: 12px;
+                display: inline-block;
+            }
+
+            /* Orange accent on page titles */
+            .content .title {
+                color: #2d3748;
+                border-bottom: 3px solid #ff8c42;
+                padding-bottom: 8px;
+                display: inline-block;
+            }
+
+            /* Breadcrumb active state in orange */
+            .breadcrumb li.is-active a {
+                color: #ff6b35 !important;
+            }
+
+            /* Orange hover for navigation arrows */
+            .fas.fa-long-arrow-alt-left,
+            .fas.fa-long-arrow-alt-right {
+                color: #ff8c42;
+                transition: transform 0.2s ease;
+            }
+
+            a:hover .fas.fa-long-arrow-alt-left {
+                transform: translateX(-4px);
+            }
+
+            a:hover .fas.fa-long-arrow-alt-right {
+                transform: translateX(4px);
+            }
+
+            /* Cool-toned content background */
+            .section {
+                background-color: #ffffff;
+                flex: 1;
+            }
+
+            /* Constrain content width for optimal readability */
+            .section .container {
+                max-width: var(--content-width);
+            }
+
+            /* Footer with cool gray background */
+            .footer {
+                background-color: #e2e8f0 !important;
+            }
+
+            /* View transitions for smooth page navigation */
+            @media not (prefers-reduced-motion) {
+                @view-transition {
+                    navigation: auto;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <section class="hero is-dark is-bold">
+            <div class="hero-body">
+                <div class="container">
+                    <a href="/">
+                        <h1 class="title">JASON KNIGHT</h1>
+                    </a>
+                    <p class="subtitle">Witty subtitle here</p>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+<h1 class="title">
+    AVIF &lt;&gt; GIF comparison
+</h1>
+
+<div class="content">
+    <h1 id="comparing-avif-to-gif">Comparing AVIF to GIF.</h1>
+<h3 id="original-hevc-h-265-encoded-video-1-1mb">Original HEVC/H.265 encoded video (1.1MB)</h3>
+<video controls width="960" autoplay loop playsinline muted>
+  <source src="https://blob.bask.day/amir-banner_top.orig.mp4" type='video/mp4; codecs="hvc1.1.6.L93.B0"'>
+  <p>Your browser does not support HEVC playback. 
+     Try <a href="https://blob.bask.day/amir-banner_top.orig.mp4">downloading the video</a> or using Safari/Chrome.</p>
+</video>
+<h3 id="webm-1-1mb">WebM (1.1MB)</h3>
+<video controls width="960" autoplay loop playsinline muted>
+  <source src="https://blob.bask.day/amir-banner_top.webm" type='video/webm'>
+  <p>Your browser does not support webm playback. 
+     Try <a href="https://blob.bask.day/amir-banner_top.webm">downloading the video</a> or using Safari/Chrome.</p>
+</video>
+<h3 id="webp-1-0mb">WebP (1.0MB)</h3>
+<p><img src="https://blob.bask.day/amir-banner_top.webp" alt="WEBP" /></p>
+<h3 id="avif-400kb">AVIF (400KB)</h3>
+<p><img src="https://blob.bask.day/amir-banner_top.avif" alt="AVIF" /></p>
+<h3 id="gif-4-5mb">GIF (4.5MB)</h3>
+<p><img src="https://blob.bask.day/amir-banner_top.gif" alt="GIF" /></p>
+<h2 id="conversion-commands">Conversion commands:</h2>
+<p>AVIF (settings recommended by Gemini)</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span> </span><span style="color:#bf616a;">ffmpeg -i</span><span> banner_top.av1.mov \
+</span><span style="color:#bf616a;">      -c</span><span>:v libaom-av1 \
+</span><span style="color:#bf616a;">      -crf</span><span> 38 \
+</span><span style="color:#bf616a;">      -tile-columns</span><span> 2 \
+</span><span style="color:#bf616a;">      -tiles</span><span> 4x1 \
+</span><span style="color:#bf616a;">      -b</span><span>:v 400k \
+</span><span style="color:#bf616a;">      -maxrate</span><span> 800k \
+</span><span style="color:#bf616a;">      -cpu-used</span><span> 4 \
+</span><span style="color:#bf616a;">      -enable-cdef</span><span> 0 \
+</span><span style="color:#bf616a;">      -enable-global-motion</span><span> 0 \
+</span><span style="color:#bf616a;">      -denoise-noise-level</span><span> 0 \
+</span><span style="color:#bf616a;">      -pix_fmt</span><span> yuv420p \
+</span><span>      test4.avif
+</span></code></pre>
+<p>I found on Webkit (iOS web rendering that powers both Safari and iOS Chrome), there were some playback issues (very slightly reduced framerate during portions of the 7 second clip). I found that reducing the number of encoded features (and using tiles) alleviated this issue.</p>
+<p>GIF (settings recommended by Gemini)</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span> </span><span style="color:#bf616a;">ffmpeg -i</span><span> banner_top.av1.mov</span><span style="color:#bf616a;"> -filter_complex </span><span>\
+</span><span>     &quot;</span><span style="color:#a3be8c;">[0:v] split [a][b]; </span><span style="color:#96b5b4;">\
+</span><span style="color:#a3be8c;">     [a] palettegen=stats_mode=full [p]; </span><span style="color:#96b5b4;">\
+</span><span style="color:#a3be8c;">     [b][p] paletteuse=dither=sierra2_4a</span><span>&quot; \
+</span><span style="color:#bf616a;">     -loop</span><span> 0 output.gif
+</span></code></pre>
+<p>WebP</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">ffmpeg -i</span><span> banner_top.av1.mov \
+</span><span style="color:#bf616a;">    -c</span><span>:v libwebp \
+</span><span style="color:#bf616a;">    -lossless</span><span> 0 \
+</span><span style="color:#bf616a;">    -q</span><span>:v 75 \
+</span><span style="color:#bf616a;">    -loop</span><span> 0 \
+</span><span style="color:#bf616a;">    -vsync</span><span> 0 \
+</span><span>    test.webp
+</span></code></pre>
+<p>WebM</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">ffmpeg -i</span><span> banner_top.av1.mov \
+</span><span style="color:#bf616a;">    -c</span><span>:v libvpx-vp9 \
+</span><span style="color:#bf616a;">    -pix_fmt</span><span> yuva420p \
+</span><span style="color:#bf616a;">    -crf</span><span> 20</span><span style="color:#bf616a;"> -b</span><span>:v 0 \
+</span><span style="color:#bf616a;">    -an </span><span>\
+</span><span>    test.webm
+</span></code></pre>
+
+</div>
+
+<ul>
+    
+</ul>
+
+</div>
+        </section>
+        <footer class="footer">
+            <nav class="container level is-mobile">
+                <div class="level-left">
+                    <a
+                        class="level-item has-text-grey-light"
+                        href="http://www.linkedin.com/in/binarybana/"
+                        >in</a
+                    >
+                    <a
+                        class="level-item has-text-grey-light"
+                        href="https://www.github.com/binarybana/"
+                        >gh</a
+                    >
+                </div>
+
+                <div class="level-right">
+                    <p class="has-text-grey-light">
+                        Content is
+                        <a
+                            class="has-text-grey-light"
+                            href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+                            >CC BY NC SA 4.0</a
+                        >.
+                    </p>
+                </div>
+            </nav>
+        </footer>
+    </body>
+</html>

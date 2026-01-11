@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Thoughts ⇌ Jason</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
+        />
+        <style type="text/css">
+            /* Content width constraint for optimal readability */
+            :root {
+                --content-width: 50rem;
+            }
+
+            /* Cooler base colors for contrast with orange */
+            html {
+                height: 100%;
+            }
+
+            body {
+                min-height: 100%;
+                display: flex;
+                flex-direction: column;
+                background-color: #e2e8f0;
+            }
+
+            h1 {
+                font-size: 4em;
+                color: #4a5568;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            }
+
+            .css-full-comments-content {
+                padding: 100px;
+            }
+
+            /* Override hero to use cool dark blue-gray */
+            .hero.is-dark {
+                background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%) !important;
+            }
+
+            /* Orange accent colors */
+            a {
+                color: #ff8c42;
+                transition: all 0.2s ease;
+            }
+
+            a:hover {
+                color: #ff6b35 !important;
+                text-decoration: underline;
+            }
+
+            .footer a:hover i {
+                color: #ff6b35 !important;
+                transform: scale(1.1);
+            }
+
+            .footer a i {
+                transition: all 0.3s ease;
+            }
+
+            /* Orange date/metadata */
+            .has-text-grey-light.subtitle,
+            .subtitle.is-6.has-text-grey-light {
+                color: #ff8c42 !important;
+            }
+
+            /* Orange border accent on titles */
+            .title a {
+                border-left: 4px solid #ff6b35;
+                padding-left: 12px;
+                display: inline-block;
+            }
+
+            /* Orange accent on page titles */
+            .content .title {
+                color: #2d3748;
+                border-bottom: 3px solid #ff8c42;
+                padding-bottom: 8px;
+                display: inline-block;
+            }
+
+            /* Breadcrumb active state in orange */
+            .breadcrumb li.is-active a {
+                color: #ff6b35 !important;
+            }
+
+            /* Orange hover for navigation arrows */
+            .fas.fa-long-arrow-alt-left,
+            .fas.fa-long-arrow-alt-right {
+                color: #ff8c42;
+                transition: transform 0.2s ease;
+            }
+
+            a:hover .fas.fa-long-arrow-alt-left {
+                transform: translateX(-4px);
+            }
+
+            a:hover .fas.fa-long-arrow-alt-right {
+                transform: translateX(4px);
+            }
+
+            /* Cool-toned content background */
+            .section {
+                background-color: #ffffff;
+                flex: 1;
+            }
+
+            /* Constrain content width for optimal readability */
+            .section .container {
+                max-width: var(--content-width);
+            }
+
+            /* Footer with cool gray background */
+            .footer {
+                background-color: #e2e8f0 !important;
+            }
+
+            /* View transitions for smooth page navigation */
+            @media not (prefers-reduced-motion) {
+                @view-transition {
+                    navigation: auto;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <section class="hero is-dark is-bold">
+            <div class="hero-body">
+                <div class="container">
+                    <a href="/">
+                        <h1 class="title">JASON KNIGHT</h1>
+                    </a>
+                    <p class="subtitle">Witty subtitle here</p>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+
+<div class="columns">
+    <div class="column is-three-quarters">
+        <div class="content">
+            <p class="title">
+                What does our DNA look like?
+            </p>
+            <p class="subtitle is-6 has-text-grey-light">2011-06-24 - Reading time:
+                4
+                minutes
+            </p>
+        </div>
+    </div>
+    <div class="column is-one-quarter">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+            <ul>
+                
+                
+                <li><a href="https:&#x2F;&#x2F;binarybana.github.io&#x2F;"> Home </a></li>
+                
+                
+                <li><a href="https:&#x2F;&#x2F;binarybana.github.io&#x2F;blog&#x2F;"> Blog </a></li>
+                
+                <li class="is-active" aria-current="page"><a href="#">What does our DNA lo…</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+</div>
+<!-- <h2> TOC </h2>
+    <ul>
+        
+    </ul> -->
+
+<div class="content">
+    <div class="css-full-post-content js-full-post-content">
+Everyone has seen the DNA double helix (if not<a href="http://en.wikipedia.org/wiki/DNA"> click here right now</a>), but what does your DNA look like as an image?<br /><br />Specifically, I was daydreaming today when I thought: what if someone took one of the sequenced human genomes out there and converted all the letters into corresponding colors for the pixels of an image?<br /><br />I decided that that someone was going to be me!<br /><br />And a few minutes later with somewhere north of 25 google searches (where do I download the human genome? How do I remove newlines and capitalize letters with awk? How can I write PNGs with Haskell? What color code is a 32bit RGBA PNG in its header? etc...) I had my answer:<br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-V_3Gj0y8kA0/TgUHrXfv-kI/AAAAAAAAAlw/435g5na3XtU/s1600/testimg.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="319" src="http://3.bp.blogspot.com/-V_3Gj0y8kA0/TgUHrXfv-kI/AAAAAAAAAlw/435g5na3XtU/s320/testimg.png" width="320" /></a></div><div class="separator" style="clear: both; text-align: center;"><br /></div>Now, a few caveats: This is only a portion of the Y chromosome of the <a href="http://hgdownload.cse.ucsc.edu/downloads.html#human">19th human sequenced</a>. It really doesn't look like much does it? But it was a fun exercise for the 30 minutes or so before I headed home for the weekend.<br /><br />The code (almost all of which came from <a href="http://www.haskell.org/haskellwiki/Library/PNG">this PNG example</a>) can be <a href="http://hpaste.org/48283">found here</a>. It is very ugly and does not use Haskell as it was meant to be used. But it gets the job done!<br /><br />Please let me know if you have any suggestions as to making the image prettier/more informative. Perhaps I should indicate the location of TATA boxes or Poly-A tails etc... Maybe I'll find some time to do it too!<br /><br />Just imagine that most of that is inside of us (the guys anyways, sorry ladies!), inside of every cell in our bodies in fact. Kinda neat if you ask me.
+</div>
+<div class="css-full-comments-content js-full-comments-content">
+<div class="css-full-comment js-full-comment">
+  <div class="css-comment-user-link js-comment-user-link">
+  <a href="http://www.blogger.com/profile/11137554613812815716">
+  <div class="css-comment-name js-comment-name">
+    Austin
+  </div>
+  </a>
+  <div class="css-comment-date js-comment-date">
+    2011-07-05T05:02:06.240Z
+  </div>
+  </div>
+  <div class="css-comment-content js-comment-content">
+    Nice work Jason, cool to see your using Haskell as well.  Maybe I&#39;ll try it out on some of the other chromosomes or maybe tweak it a bit if you&#39;re cool with that.  Anyway, that&#39;s only if I find some time, but I&#39;ll let you know.
+  </div>
+  <br/>
+</div>
+<div class="css-full-comment js-full-comment">
+  <div class="css-comment-user-link js-comment-user-link">
+  <a href="http://www.blogger.com/profile/00649400936159605312">
+  <div class="css-comment-name js-comment-name">
+    Jason Knight
+  </div>
+  </a>
+  <div class="css-comment-date js-comment-date">
+    2011-07-05T12:58:30.000Z
+  </div>
+  </div>
+  <div class="css-comment-content js-comment-content">
+    Thanks Austin! I&#39;d love for you to tweak it. There are a lot of cool things that could be done with it. I look forward to seeing it :).
+  </div>
+  <br/>
+</div>
+</div>
+</div>
+
+<div class="columns">
+    
+    
+</div>
+
+</div>
+        </section>
+        <footer class="footer">
+            <nav class="container level is-mobile">
+                <div class="level-left">
+                    <a
+                        class="level-item has-text-grey-light"
+                        href="http://www.linkedin.com/in/binarybana/"
+                        >in</a
+                    >
+                    <a
+                        class="level-item has-text-grey-light"
+                        href="https://www.github.com/binarybana/"
+                        >gh</a
+                    >
+                </div>
+
+                <div class="level-right">
+                    <p class="has-text-grey-light">
+                        Content is
+                        <a
+                            class="has-text-grey-light"
+                            href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+                            >CC BY NC SA 4.0</a
+                        >.
+                    </p>
+                </div>
+            </nav>
+        </footer>
+    </body>
+</html>

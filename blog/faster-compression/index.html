@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Thoughts ⇌ Jason</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
+        />
+        <style type="text/css">
+            /* Content width constraint for optimal readability */
+            :root {
+                --content-width: 50rem;
+            }
+
+            /* Cooler base colors for contrast with orange */
+            html {
+                height: 100%;
+            }
+
+            body {
+                min-height: 100%;
+                display: flex;
+                flex-direction: column;
+                background-color: #e2e8f0;
+            }
+
+            h1 {
+                font-size: 4em;
+                color: #4a5568;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            }
+
+            .css-full-comments-content {
+                padding: 100px;
+            }
+
+            /* Override hero to use cool dark blue-gray */
+            .hero.is-dark {
+                background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%) !important;
+            }
+
+            /* Orange accent colors */
+            a {
+                color: #ff8c42;
+                transition: all 0.2s ease;
+            }
+
+            a:hover {
+                color: #ff6b35 !important;
+                text-decoration: underline;
+            }
+
+            .footer a:hover i {
+                color: #ff6b35 !important;
+                transform: scale(1.1);
+            }
+
+            .footer a i {
+                transition: all 0.3s ease;
+            }
+
+            /* Orange date/metadata */
+            .has-text-grey-light.subtitle,
+            .subtitle.is-6.has-text-grey-light {
+                color: #ff8c42 !important;
+            }
+
+            /* Orange border accent on titles */
+            .title a {
+                border-left: 4px solid #ff6b35;
+                padding-left: 12px;
+                display: inline-block;
+            }
+
+            /* Orange accent on page titles */
+            .content .title {
+                color: #2d3748;
+                border-bottom: 3px solid #ff8c42;
+                padding-bottom: 8px;
+                display: inline-block;
+            }
+
+            /* Breadcrumb active state in orange */
+            .breadcrumb li.is-active a {
+                color: #ff6b35 !important;
+            }
+
+            /* Orange hover for navigation arrows */
+            .fas.fa-long-arrow-alt-left,
+            .fas.fa-long-arrow-alt-right {
+                color: #ff8c42;
+                transition: transform 0.2s ease;
+            }
+
+            a:hover .fas.fa-long-arrow-alt-left {
+                transform: translateX(-4px);
+            }
+
+            a:hover .fas.fa-long-arrow-alt-right {
+                transform: translateX(4px);
+            }
+
+            /* Cool-toned content background */
+            .section {
+                background-color: #ffffff;
+                flex: 1;
+            }
+
+            /* Constrain content width for optimal readability */
+            .section .container {
+                max-width: var(--content-width);
+            }
+
+            /* Footer with cool gray background */
+            .footer {
+                background-color: #e2e8f0 !important;
+            }
+
+            /* View transitions for smooth page navigation */
+            @media not (prefers-reduced-motion) {
+                @view-transition {
+                    navigation: auto;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <section class="hero is-dark is-bold">
+            <div class="hero-body">
+                <div class="container">
+                    <a href="/">
+                        <h1 class="title">JASON KNIGHT</h1>
+                    </a>
+                    <p class="subtitle">Witty subtitle here</p>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+
+<div class="columns">
+    <div class="column is-three-quarters">
+        <div class="content">
+            <p class="title">
+                Faster Compression
+            </p>
+            <p class="subtitle is-6 has-text-grey-light">2013-01-18 - Reading time:
+                2
+                minutes
+            </p>
+        </div>
+    </div>
+    <div class="column is-one-quarter">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+            <ul>
+                
+                
+                <li><a href="https:&#x2F;&#x2F;binarybana.github.io&#x2F;"> Home </a></li>
+                
+                
+                <li><a href="https:&#x2F;&#x2F;binarybana.github.io&#x2F;blog&#x2F;"> Blog </a></li>
+                
+                <li class="is-active" aria-current="page"><a href="#">Faster Compression</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+</div>
+<!-- <h2> TOC </h2>
+    <ul>
+        
+    </ul> -->
+
+<div class="content">
+    <div class="css-full-post-content js-full-post-content">
+<i>Reader Warning: If you are not familiar with the linux command line, you best turn back now and try coming back later for other, less technical posts. :)</i><br /><br />So I was getting tired of waiting for next generation sequencing files (6 - 40GB uncompressed) to compress and decompress, so I decided to speed things up a bit while feeding my 11 idle cores more evenly.<br /><br />I found <a href="http://zlib.net/pigz/" target="_blank">pigz</a> (prounceced <i>pig-zee</i>) and <a href="https://github.com/kjn/lbzip2" target="_blank">lbzip2</a> that are gzip and bzip2 compatible linux utilities that are specifically designed to utilize multiple cores. To figure out the relative merits of these against their single core predecessors, I decided to have a little bit of fun. Here are a set of timings I developed on a small test file (with real ASCII sequence data):<br /><br /><script src="https://gist.github.com/4568246.js"></script><br />In summary I am extremely impressed at the boost that a single letter (and 11 idle cores) can give to compression speed. Also, with lbzip2 fully accelerating both compression and decompression (unlike pigz) it makes the bzip2 format not only feasible, but completely logical!<br /><br />Also another benefit to using bz2 over gz is the ability to quickly index in to these files with random seeks as explained at this <a href="http://blastedbio.blogspot.com/2011/11/random-access-to-bzip2.html" target="_blank">nice blog post</a>.<br /><br />Caveat: the example command given for measurement is written for the zsh shell.<br /><br />Also, if you'd like to comment, please do so on my G+ post <a href="https://plus.google.com/u/0/102340116383554399495/posts/SfS8MR1NLMU" target="_blank">here</a>.
+</div>
+</div>
+
+<div class="columns">
+    
+    
+</div>
+
+</div>
+        </section>
+        <footer class="footer">
+            <nav class="container level is-mobile">
+                <div class="level-left">
+                    <a
+                        class="level-item has-text-grey-light"
+                        href="http://www.linkedin.com/in/binarybana/"
+                        >in</a
+                    >
+                    <a
+                        class="level-item has-text-grey-light"
+                        href="https://www.github.com/binarybana/"
+                        >gh</a
+                    >
+                </div>
+
+                <div class="level-right">
+                    <p class="has-text-grey-light">
+                        Content is
+                        <a
+                            class="has-text-grey-light"
+                            href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+                            >CC BY NC SA 4.0</a
+                        >.
+                    </p>
+                </div>
+            </nav>
+        </footer>
+    </body>
+</html>
