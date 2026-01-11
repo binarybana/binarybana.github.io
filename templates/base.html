@@ -9,6 +9,11 @@
             href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
         />
         <style type="text/css">
+            /* Content width constraint for optimal readability */
+            :root {
+                --content-width: 50rem;
+            }
+
             /* Cooler base colors for contrast with orange */
             html {
                 height: 100%;
@@ -101,6 +106,11 @@
             .section {
                 background-color: #ffffff;
                 flex: 1;
+            }
+
+            /* Constrain content width for optimal readability */
+            .section .container {
+                max-width: var(--content-width);
             }
 
             /* Footer with cool gray background */
