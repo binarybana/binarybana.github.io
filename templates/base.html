@@ -107,6 +107,13 @@
             .footer {
                 background-color: #e2e8f0 !important;
             }
+
+            /* View transitions for smooth page navigation */
+            @media not (prefers-reduced-motion) {
+                @view-transition {
+                    navigation: auto;
+                }
+            }
         </style>
     </head>
 
