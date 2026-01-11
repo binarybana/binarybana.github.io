@@ -10,26 +10,26 @@ page_template = "blog-page.html"
 
 ### Original HEVC/H.265 encoded video (1.1MB)
 <video controls width="960" autoplay loop playsinline muted>
-  <source src="https://pub-e779c56998574a7c84980fc16b36f129.r2.dev/amir-banner_top.orig.mp4" type='video/mp4; codecs="hvc1.1.6.L93.B0"'>
+  <source src="https://blob.bask.day/amir-banner_top.orig.mp4" type='video/mp4; codecs="hvc1.1.6.L93.B0"'>
   <p>Your browser does not support HEVC playback. 
-     Try <a href="https://pub-e779c56998574a7c84980fc16b36f129.r2.dev/amir-banner_top.orig.mp4">downloading the video</a> or using Safari/Chrome.</p>
+     Try <a href="https://blob.bask.day/amir-banner_top.orig.mp4">downloading the video</a> or using Safari/Chrome.</p>
 </video>
 
 ### WebM (1.1MB)
 <video controls width="960" autoplay loop playsinline muted>
-  <source src="https://pub-e779c56998574a7c84980fc16b36f129.r2.dev/amir-banner_top.webm" type='video/webm'>
+  <source src="https://blob.bask.day/amir-banner_top.webm" type='video/webm'>
   <p>Your browser does not support webm playback. 
-     Try <a href="https://pub-e779c56998574a7c84980fc16b36f129.r2.dev/amir-banner_top.webm">downloading the video</a> or using Safari/Chrome.</p>
+     Try <a href="https://blob.bask.day/amir-banner_top.webm">downloading the video</a> or using Safari/Chrome.</p>
 </video>
 
 ### WebP (1.0MB)
-![WEBP](https://pub-e779c56998574a7c84980fc16b36f129.r2.dev/amir-banner_top.webp)
+![WEBP](https://blob.bask.day/amir-banner_top.webp)
 
 ### AVIF (400KB)
-![AVIF](https://pub-e779c56998574a7c84980fc16b36f129.r2.dev/amir-banner_top.avif)
+![AVIF](https://blob.bask.day/amir-banner_top.avif)
 
 ### GIF (4.5MB)
-![GIF](https://pub-e779c56998574a7c84980fc16b36f129.r2.dev/amir-banner_top.gif)
+![GIF](https://blob.bask.day/amir-banner_top.gif)
 
 ## Conversion commands:
 
