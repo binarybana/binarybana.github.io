@@ -21,7 +21,7 @@
                 {% set subsection = get_section(path=p) %}
                 <li><a href="{{ subsection.permalink }}"> {{ subsection.title }} </a></li>
                 {% endfor %}
-                <li class="is-active" aria-current="page"><a href="#">{{ page.title | truncate(length=10) }}</a>
+                <li class="is-active" aria-current="page"><a href="#">{{ page.title | truncate(length=20) }}</a>
                 </li>
             </ul>
         </nav>
