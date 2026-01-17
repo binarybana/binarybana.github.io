@@ -1,0 +1,14 @@
+name = "blog-upload"
+main = "src/index.ts"
+compatibility_date = "2024-12-01"
+
+# R2 bucket binding
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "binarybana-blog-static"
+
+# Environment variables (set via wrangler secret put)
+# AUTH_TOKEN - Bearer token for authentication
+
+[vars]
+BASE_URL = "https://blob.bask.day"
