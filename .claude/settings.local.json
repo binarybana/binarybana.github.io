@@ -14,5 +14,9 @@
       "Bash(npm update *)",
       "Bash(node -e \"const l=require\\('./package-lock.json'\\); const w=l.packages['node_modules/wrangler']; console.log\\('wrangler locked:', w?.version\\)\")"
     ]
+  },
+  "sandbox": {
+    "enabled": true,
+    "autoAllowBashIfSandboxed": true
   }
 }
