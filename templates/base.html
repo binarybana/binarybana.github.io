@@ -171,6 +171,13 @@
                 transition: color 0.3s ease;
             }
 
+            /* Override Bulma's hard-coded strong color (#363636), which is unreadable in dark mode */
+            .content strong,
+            strong {
+                color: var(--text-primary);
+                transition: color 0.3s ease;
+            }
+
             /* Headings in content */
             .content h1,
             .content h2,
